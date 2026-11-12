@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animated Heart</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      background: #000;
+      overflow: hidden;
+    }
+    .heart {
+      color: #ff0000;
+      font-size: clamp(150px, 35vw, 260px);
+      line-height: 1;
+      filter: drop-shadow(0 0 18px #ff0000);
+      animation: beat 1s ease-in-out infinite;
+    }
+    @keyframes beat {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+    }
+  </style>
+</head>
+<body>
+  <div class="heart" aria-label="Animated red heart">❤️</div>
+</body>
+</html>
